@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+
     const openButton = document.getElementById("open-invitation-btn");
     const landingPage = document.getElementById("landing-page");
     const mainContent = document.getElementById("main-content");
@@ -22,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
         backgroundMusic.volume = 0.6; // Atur volume agar tidak terlalu keras
         backgroundMusic.play().catch(error => {
             console.warn("Autoplay music failed:", error);
-            // Penanganan jika browser memblokir autoplay
         });
     });
 
@@ -64,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
     if (wishesForm) {
         wishesForm.addEventListener("submit", function(e) {
             e.preventDefault();
-            // Di aplikasi nyata, data ini akan dikirim ke server.
             alert("Ucapan Anda berhasil dikirim!");
             wishesForm.reset();
         });
